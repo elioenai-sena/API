@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/contatos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Contatos API</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Sair</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a onclick="form()">Novo Contato</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <div id="login"></div>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <i class="material-icons prefix">account_circle</i>
+          </ul>
+
+        </div>
+      </nav>
+
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <!--<th>emailUsuario</th>-->
+              <th>Name</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Data Nascimento</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+
+          <tbody id="conteudoTabela">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      var urlLista = window.location.href;
+      urlLista = urlLista.split('?')
+      loadData(urlLista[1])
+      document.getElementById('login').innerText = urlLista[1]
+    </script>
+  </body>
+
+</html>

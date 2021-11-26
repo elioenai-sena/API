@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <title>Editar</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/contatos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Contatos API</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <div id="login"></div>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <i class="material-icons prefix">account_circle</i>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <h5 class="header">Detalhe Contato</h5>
+      </div>
+      <fieldset>
+        <div class="content">
+          <div class="row">
+            <input id="nome" type="text" class="validate">
+            <label for="nome">Nome</label>
+          </div>
+
+          <div class="row">
+            <input id="telefone" type="tel" class="validate">
+            <label for="telefone">Telefone</label>
+          </div>
+
+          <div class="row">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+
+          <div class="row">
+            <input id="nascimento" type="text" class=" validate">
+            <label for="nascimento">Data Nascimento</label>
+          </div>
+      </fieldset>
+      <div class="row">
+        <div class="col s4"></div>
+        <div class="col s4"></div>
+        <div class="col s4">
+          <a id="editar" class="waves-effect waves-light btn"><i class="material-icons">edit</i> Editar</a>
+          <a id="cancelar" class="waves-effect waves-light btn red lighten-2"><i class="material-icons">cancel</i>
+            Cancelar</a>
+        </div>
+        <div id="login" style="visibility: hidden;"></div>
+        <div id="id"></div>
+        <!-- <input id="id" type="text" style="visibility: hidden;">-->
+      </div>
+    </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+
+      var urlDetails = window.location.href
+      urlDetails = urlDetails.split("?")
+      let id = urlDetails[1]
+      loadDetail(id)
+
+      document.getElementById('editar').addEventListener('click', atualizar)
+      document.getElementById('cancelar').addEventListener('click', cancelar)
+
+    </script>
+  </body>
+
+</html>

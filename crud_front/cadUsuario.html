@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <title>CadUsario</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/contatos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Contatos API</a>
+        </div>
+      </nav>
+
+      <div class="row">
+        <h5 class="header">Cadastro de Usuario</h5>
+      </div>
+
+      <div class="content">
+        <form action="">
+          <fieldset>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome" type="text" class="validate">
+                <label for="nome">Nome</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="senha" type="password" class="validate">
+                <label for="senha">Senha</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="row">
+            <div class="col s4"></div>
+            <div class="col s4"></div>
+            <div class="col s4">
+              <a id="salvar" class="waves-effect waves-light btn"><i class="material-icons">save</i> Salvar</a>
+              <a href="index.html" class="waves-effect waves-light btn red lighten-2"><i
+                  class="material-icons">cancel</i>
+                Cancelar</a>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      document.getElementById('salvar').addEventListener('click', saveUser)
+    </script>
+  </body>
+
+</html>

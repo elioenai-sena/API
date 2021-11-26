@@ -1,0 +1,25 @@
+nav {
+    padding-left: 15pt;
+    padding-right: 15pt;
+}
+fieldset {
+    margin: 5pt;
+}
+
+.content{
+    margin-top: 15pt;
+}
+
+.header {
+    color: #ee6e73;
+    font-weight: 300;
+}
+
+.field-title {
+    font-weight: 500;
+}
+
+.field-value {
+    color: #616161;
+    font-weight: 300;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/contatos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Lista de Contatos</a>
+        </div>
+      </nav>
+
+      <div class="row">
+        <h5 class="header">Login</h5>
+      </div>
+
+      <div class="content">
+
+        <form action="">
+          <fieldset>
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="login" type="text" class="validate">
+                <label for="login">Login</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <input id="senha" type="password" class="validate">
+                <label for="senha">Password</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="row">
+            <div class="col s4"></div>
+            <div class="col s4"></div>
+            <div class="col s4">
+              <a id="entrar" class="waves-effect waves-light btn"><i class="material-icons"></i>Entrar</a>
+              <a href="cadUsuario.html" class="waves-effect waves-light btn red lighten-2"><i
+                  class="material-icons"></i>Criar Conta</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      document.getElementById('entrar').addEventListener('click', auth)
+    </script>
+  </body>
+
+</html>
